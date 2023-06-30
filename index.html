@@ -52,13 +52,20 @@
           <input id="FechaIngreso" name="Fecha" type="date">
           
       </form>
-      <h1>Salario</h1>
-      <form id="employee-form">
-        <label for="Salario">Salario:</label>
-        <input id="Salario" name="Salario" type="text">
-    
-        <input type="submit" id="botonSalario" value="Modificar">
-    </form>
+
+
+        <label class="form-label">Salario</label>
+        <div class="input-group mb-3">
+
+
+          <label type="text" class="form-control" id="resultadoValor" name="resultadoValor"
+            aria-label="Example text with button addon" aria-describedby="button-addon1" disabled></label>
+            <br>
+          <button class="btn btn-success" onclick="modificarValor()" type="button"
+            id="btn_modificar_salario">Modificar</button>
+        </div>
+
+
     <h1>Calculos</h1>
     <form id="employee-form">
     <input onclick="calculoEdad()" type="button" value="calcular edad">
@@ -71,8 +78,9 @@
       aria-label="Example text with button addon " aria-describedby="button-addon2" disabled></label> 
 
     <form id="employee-form"><br>
-    <input type="button" value="calcular prestaciones">
-    <input id="calcularPrestaciones"  type="text">
+    <input onclick="calcularPrestaciones()" type="button" value="calcular prestaciones">
+    <label type="text" class="form-control" id="resultadoPrestaciones" name="antig"
+      aria-label="Example text with button addon " aria-describedby="button-addon2" disabled></label> 
 
     <form id="employee-form">
       <h1>Puntos de extencion</h1>
@@ -85,5 +93,7 @@
       </div>
     </div>
     <script src="js/funciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
   </body>
 </html>
