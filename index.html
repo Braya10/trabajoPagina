@@ -7,6 +7,7 @@
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -45,7 +46,7 @@
     </form>
         <form id="employee-form">
           <label for="Fecha">Fecha de nacimiento:</label>
-          <input id="FechaNacimiento" name="Fecha" type="date">
+          <input id="fechaNacimiento" name="fechaNacimiento" type="date">
           <br>
           <label for="Fecha">Fecha de ingreso:</label>
           <input id="FechaIngreso" name="Fecha" type="date">
@@ -56,18 +57,23 @@
         <label for="Salario">Salario:</label>
         <input id="Salario" name="Salario" type="text">
     
-        <input type="submit" value="Modificar">
+        <input type="submit" id="botonSalario" value="Modificar">
     </form>
     <h1>Calculos</h1>
     <form id="employee-form">
-    <input type="button" value="calcular edad">
-    <input  type="text">
+    <input onclick="calculoEdad()" type="button" value="calcular edad">
+    <label type="text" class="form-control" id="resultadoEdad" name="antig"
+    aria-label="Example text with button addon " aria-describedby="button-addon2" disabled></label> 
+
     <form id="employee-form">
-      <input type="button" value="calcular antiguedad">
-    <input  type="text">
+      <input onclick="calculoPermanencia()" type="button" value="calcular antiguedad">
+      <label type="text" class="form-control" id="resultadoPermanencia" name="antig"
+      aria-label="Example text with button addon " aria-describedby="button-addon2" disabled></label> 
+
     <form id="employee-form"><br>
-      <input type="button" value="calcular prestaciones">
-    <input  type="text">
+    <input type="button" value="calcular prestaciones">
+    <input id="calcularPrestaciones"  type="text">
+
     <form id="employee-form">
       <h1>Puntos de extencion</h1>
       <input type="button" value="opcion 1"> <input type="button" value="opcion 2">
@@ -75,9 +81,9 @@
     
     
     
-        <script src="script.js"></script>
+        
       </div>
     </div>
-    
+    <script src="js/funciones.js"></script>
   </body>
 </html>
