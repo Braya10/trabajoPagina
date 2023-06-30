@@ -82,12 +82,32 @@
     <label type="text" class="form-control" id="resultadoPrestaciones" name="antig"
       aria-label="Example text with button addon " aria-describedby="button-addon2" disabled></label> 
 
-    <form id="employee-form">
-      <h1>Puntos de extencion</h1>
-      <input type="button" value="opcion 1"> <input type="button" value="opcion 2">
+  <br>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Opcion 1
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Datos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input placeholder="Ingrese nombre Padre" type="text" name="nombrePadre" id="nombrePadre">
+        <input placeholder="Ingrese nombre Madre" type="text" name="nombreMadre" id="nombreMadre">
+        <input placeholder="Ingrese Comida favorita" type="text" name="comida" id="comida">
+      </div>
+      <div class="modal-footer">
+        <button onclick="nuevoDatos()" type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
       
-    
-    
     
         
       </div>
