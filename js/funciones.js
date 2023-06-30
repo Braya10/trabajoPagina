@@ -81,3 +81,21 @@ const myInput = document.getElementById('myInput')
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
+
+
+function calcularDias() {
+    var fechaIngre = document.getElementById("FechaIngreso").value;
+    var fechaActual = new Date();
+
+    var ingreso = new Date(fechaIngre);
+    ingreso.setFullYear(fechaActual.getFullYear()); // Establecer el año del cumpleaños al año actual
+
+    if (ingreso < fechaActual) {
+        ingreso.setFullYear(fechaActual.getFullYear() + 1); // Si el cumpleaños ya pasó este año, sumarle 1 año
+    }
+
+    var diasFaltantes = Math.floor((ingreso - fechaActual) / (1000 * 60 * 60 * 24)); // Cálculo de los días faltantes
+
+    var resultado = document.getElementById("resultadoIngreso");
+    resultado.innerHTML = "Faltan " + diasFaltantes + " días para cumplir un año mas de antiguedad";
+}
